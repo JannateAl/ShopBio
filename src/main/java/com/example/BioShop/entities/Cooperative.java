@@ -1,5 +1,6 @@
 package com.example.BioShop.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +23,7 @@ public class Cooperative {
     private Region region;
 
     @OneToMany(mappedBy = "cooperative")
+    @JsonIgnore
     private List<Produit> produits;
 
     @ManyToMany

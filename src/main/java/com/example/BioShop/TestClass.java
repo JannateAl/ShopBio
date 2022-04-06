@@ -10,7 +10,7 @@ import java.util.List;
 @Configuration
 public class TestClass {
 
-    @Bean
+    /*@Bean
     CommandLineRunner commandLineRunner(ProduitRepository produitRepository) {
         return args -> {
             Produit prod1 = new Produit(
@@ -32,5 +32,5 @@ public class TestClass {
             produitRepository.save(prod1);
             produitRepository.save(prod2);
         };
-    }
+    }*/
 }
