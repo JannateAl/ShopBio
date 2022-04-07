@@ -28,10 +28,15 @@ public class ProduitController {
        return produitRepository.save(produit);
     }
 
-    @GetMapping(path = "/{cooperative}/cooperative/{categorie}/categorie")
+    @GetMapping(path = "/cooperative/{cooperative}/categorie/{categorie}")
     public List<Produit> getProduitsCooperativeAndCategorie(@PathVariable("categorie") String categorieNom,
                                                             @PathVariable("cooperative") String cooperativeNom) {
 
         return produitService.getProduitsbyCooperativeAndCategorie(categorieNom,cooperativeNom);
+    }
+
+    @GetMapping(path="/{region}/region")
+    public List<Produit> getCooperativesByRegion(@PathVariable("region") String nom) {
+        return produitService.getProduitsByRegion(nom);
     }
 }

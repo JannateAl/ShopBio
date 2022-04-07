@@ -7,4 +7,6 @@ import java.util.List;
 public interface IProduitService {
     
     public List<Produit> getProduitsbyCooperativeAndCategorie(String categorieNom,String cooperativeNom);
+
+    public List<Produit> getProduitsByRegion(String nom);
 }
